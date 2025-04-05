@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GOLIATH SYMBOLS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
 
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    table {
+      width: 80%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>GOLIATH SYMBOLS</h1>
+
+  <table id="gameTable">
+    <thead>
+      <tr>
+        <th>Game</th>
+        <th>Platforms</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Game entries will go here -->
+    </tbody>
+  </table>
+
+  <script>
+    function addGame(gameName, platforms) {
+      const table = document.getElementById("gameTable").getElementsByTagName('tbody')[0];
+      const row = table.insertRow();
+
+      const gameCell = row.insertCell(0);
+      const platformsCell = row.insertCell(1);
+
+      gameCell.textContent = gameName;
+      platformsCell.textContent = platforms;
+    }
+
+    // Example usage:
+    addGame("Elden Ring", "PC, PS5, Xbox");
+    addGame("Stardew Valley", "PC, Switch, PS4, Xbox");
+  </script>
+
+</body>
+</html>
